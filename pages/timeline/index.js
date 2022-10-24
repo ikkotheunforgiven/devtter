@@ -1,7 +1,7 @@
-export default function Timeline() {
+export default function Timeline({ userName }) {
     return (
         <>
-            <h1>This is the timeline</h1>
+            <h1>This is the timeline of {userName}</h1>
             <style jsx>{`
                 h1 {
                     font-size: 36px;
@@ -10,4 +10,9 @@ export default function Timeline() {
             `}</style>
         </>
     )
+}
+
+Timeline.getInitialProps = () => {
+    return fetch('http://localhost:3000/api/hello')
+        .then(res => res.json())
 }

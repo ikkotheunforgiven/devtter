@@ -4,10 +4,5 @@
 }
 
 .title a {
-  color: #09f;
-}
-
-.menu {
-  font-size: 24px;
-  text-align: center;
+  color: var(--primary);
 }

@@ -15,9 +15,6 @@ export default function Home() {
         <h1 className={styles.title}>
           <Link href="/"><a>Devtter</a></Link>
         </h1>
-        <nav className={styles.menu}>
-          <Link href='/timeline'><a>Timeline</a></Link>
-        </nav>
       </main>
     </div>
   )
