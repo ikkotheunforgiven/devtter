@@ -1,8 +1,26 @@
 .title {
-  text-align: center;
-  font-size: 48px;
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 16px;
 }
 
-.title a {
-  color: var(--primary);
+.subtitle {
+  color: var(--secondary);
+  font-size: 21px;
+  margin: 0;
+}
+
+.logo {
+  width: 120px;
+}
+
+.homeSection {
+  display: grid;
+  height: 100%;
+  place-content: center;
+  place-items: center;
+}
+
+.buttons {
+  margin-top: 16px;
 }
