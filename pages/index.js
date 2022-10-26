@@ -3,8 +3,20 @@ import Link from 'next/link'
 import Button from '../components/Button'
 import GitHub from '../components/Icons/GitHub'
 import styles from '../styles/Home.module.css'
+import { loginWithGitHub } from '../firebase/client'
+import { useState } from 'react'
 
 export default function Home() {
+  const [user, setUser] = useState(null)
+  const handleClick = () => {
+    loginWithGitHub().then(user => {
+      const {avatar, username} = user
+      setUser(user)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
   return (
     <div>
       <Head>
@@ -18,7 +30,7 @@ export default function Home() {
         <h1 className={styles.title}>Devtter</h1>
         <h2 className={styles.subtitle}>Talk about development with developers!</h2>
         <span className={styles.buttons}>
-          <Button>
+          <Button onClick={handleClick}>
             <GitHub fill='#fff' width={24} height={24} />
             Login with GitHub
           </Button>
