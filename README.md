@@ -1,3 +1,3 @@
-# Clon de twitter hecho con Next.js
+# Twitter clone with Next.js
 
-En progreso
+In progress
