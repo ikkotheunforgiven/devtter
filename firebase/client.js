@@ -13,18 +13,25 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig)
 
+const mapUserFromFirebaseAuthToUser = (user) => {
+    const {displayName, email, photoURL} = user
+    return {
+        avatar: photoURL,
+        userName: displayName,
+        email
+    }
+}
+
+export const onAuthStateChanged = (onChange) => {
+    return getAuth().onAuthStateChanged(user => {
+        const normalizeUser = mapUserFromFirebaseAuthToUser(user)
+        onChange(normalizeUser)
+    })
+}
+
 export const loginWithGitHub = () => {
     const githubProvider = new GithubAuthProvider()
     githubProvider.setCustomParameters(firebaseConfig)
     const auth = getAuth()
     return signInWithPopup(auth, githubProvider)
-    .then(user => {
-        const {additionalUserInfo} = user
-        const {username, profile} = additionalUserInfo
-        const {avatar_url} = profile
-        return {
-            avatar: avatar_url,
-            username
-        }
-    })
 }
