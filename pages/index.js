@@ -46,7 +46,7 @@ export default function Home() {
             {
               user && user.avatar &&
               <span>
-                <Avatar alt={user.username} src={user.avatar} text={user.userName} />
+                <Avatar alt={user.userName} src={user.avatar} text={user.userName} />
               </span>
             }
         </span>
