@@ -1,27 +1,31 @@
-.title {
-  color: var(--primary);
-  font-weight: 800;
-  font-size: 32px;
-  margin-bottom: 16px;
+.topBar {
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    height: 49px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.content {
+    padding-top: 49px;
+}
+
+.homeDiv {
+    height: 125vh;
+    place-items: inherit;
 }
 
 .subtitle {
-  color: var(--secondary);
-  font-size: 21px;
-  margin: 0;
+    font-size: 24px;
+    font-weight: 800;
 }
 
-.logo {
-  width: 120px;
-}
-
-.homeSection {
-  display: grid;
-  height: 100%;
-  place-content: center;
-  place-items: center;
-}
-
-.buttons {
-  margin-top: 18px;
+.botBar {
+    bottom: 0;
+    border-top: 1px solid #ccc;
+    height: 49px;
+    position: sticky;
+    width: 100%;
 }
