@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Avatar from '../components/Avatar'
-import Button from '../components/Button'
-import GitHub from '../components/Icons/GitHub'
-import styles from '../styles/Home.module.css'
+import Avatar from 'components/Avatar'
+import Button from 'components/Button'
+import GitHub from 'components/Icons/GitHub'
+import styles from 'styles/Start.module.css'
 import { loginWithGitHub, onAuthStateChanged } from '../firebase/client'
 import { useEffect, useState } from 'react'
 
@@ -31,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={styles.homeSection}>
+      <div className={styles.startDiv}>
         <Link href="/"><img src='/remlogo.png' alt='Logo' className={styles.logo} /></Link>
         <h1 className={styles.title}>Devtter</h1>
         <h2 className={styles.subtitle}>Talk about development with developers!</h2>
@@ -50,7 +50,7 @@ export default function Home() {
               </span>
             }
         </span>
-      </section>
+      </div>
     </div>
   )
 }
