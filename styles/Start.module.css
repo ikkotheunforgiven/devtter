@@ -1,0 +1,27 @@
+.title {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: var(--secondary);
+  font-size: 21px;
+  margin: 0;
+}
+
+.logo {
+  width: 120px;
+}
+
+.startDiv {
+  display: grid;
+  height: 100%;
+  place-content: center;
+  place-items: center;
+}
+
+.buttons {
+  margin-top: 18px;
+}
